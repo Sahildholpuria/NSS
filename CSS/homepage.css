@@ -1,0 +1,596 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+/* Header Section */
+header {
+    background-color: #0044cc;
+    color: #fff;
+    padding: 10px 20px;
+    position: relative;
+    z-index: 100;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo img {
+    max-width: 150px;
+}
+
+/* Navigation Menu */
+.nav-menu {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-menu ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.nav-menu ul li a:hover {
+    color: #ffd700;
+}
+
+/* Call-to-Action Button */
+.cta-button .btn {
+    background-color: #ffd700;
+    color: #0044cc;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.cta-button .btn:hover {
+    background-color: #ffa500;
+    color: #fff;
+}
+
+/* Mobile Menu Styles */
+.nav-menu.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #0044cc;
+    width: 200px;
+    border-radius: 5px;
+    padding: 10px;
+    z-index: 99; /* Ensure menu items are clickable */
+}
+
+.nav-menu.active ul {
+    flex-direction: column;
+    gap: 10px;
+}
+
+.nav-menu.active ul li a {
+    font-size: 18px;
+}
+
+/* Hamburger Icon */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    transition: transform 0.3s ease;
+}
+
+.menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Responsive Design for Navbar */
+@media screen and (max-width: 768px) {
+    .nav-menu {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Video Background */
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+/* Overlay */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    z-index: -1;
+}
+
+/* Hero Content */
+.hero-content {
+    z-index: 1;
+    max-width: 800px;
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+/* Buttons */
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.btn {
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #ffd700;
+    color: #0044cc;
+}
+
+.btn-primary:hover {
+    background-color: #ffa500;
+    color: #fff;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border: 2px solid #ffd700;
+    color: #ffd700;
+}
+
+.btn-secondary:hover {
+    background-color: #ffd700;
+    color: #0044cc;
+}
+
+/* Responsive Design for Hero Section */
+@media screen and (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+}
+
+/* Key Features Section */
+.key-features {
+    padding: 50px 20px;
+    background-color: #f9f9f9; /* Light gray */
+    text-align: center;
+    margin-top: 20px; /* Ensure some spacing below the hero section */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Features Grid */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    width: 100%; /* Ensures grid doesn't exceed the container width */
+    margin: 0 auto; /* Center the grid within the section */
+}
+
+/* Individual Feature Item */
+.feature-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .features-grid {
+        grid-template-columns: 1fr; /* Switch to single-column layout */
+        gap: 20px; /* Ensure consistent spacing */
+    }
+
+    .key-features h2 {
+        font-size: 2rem;
+    }
+
+    .feature-item h3 {
+        font-size: 1.3rem;
+    }
+
+    .feature-item p {
+        font-size: 0.95rem;
+    }
+}
+
+
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    line-height: 1.6;
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.testimonials h2 {
+    font-size: 2.5rem;
+    color: #0044cc;
+    margin-bottom: 40px;
+}
+
+/* Testimonials Grid */
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Testimonial Card */
+.testimonial-card {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Quote */
+.testimonial-card .quote {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Author Section */
+.author {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    flex-direction: column;
+}
+
+.author-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    object-fit: cover;
+    border: 2px solid #0044cc;
+}
+
+.author .name {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #0044cc;
+}
+
+.author .role {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Testimonial Video */
+.testimonial-video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .testimonials h2 {
+        font-size: 2rem;
+    }
+
+    .author-img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .testimonial-card {
+        padding: 15px;
+    }
+}
+
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+/* Footer */
+.footer {
+    background-color: #0044cc;
+    color: #fff;
+    padding: 50px 20px 20px;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Footer Sections */
+.footer-section {
+    flex: 1 1 300px;
+    min-width: 200px;
+}
+
+.footer-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #f9f9f9;
+}
+
+/* Quick Links */
+.quick-links {
+    list-style: none;
+    padding: 0;
+}
+
+.quick-links li {
+    margin-bottom: 10px;
+}
+
+.quick-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.quick-links a:hover {
+    color: #ffcc00;
+}
+
+/* Social Media Handles */
+.social-media {
+    list-style: none;
+    padding: 0;
+}
+
+.social-media li {
+    margin-bottom: 10px;
+}
+
+.social-media a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: color 0.3s;
+}
+
+.social-media a:hover {
+    color: #ffcc00;
+}
+
+/* Newsletter Signup */
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.newsletter-form input {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.newsletter-form button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffcc00;
+    color: #0044cc;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.newsletter-form button:hover {
+    background-color: #ffd633;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    margin-top: 30px;
+    font-size: 0.9rem;
+    color: #ddd;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        text-align: center;
+    }
+
+    .newsletter-form input {
+        max-width: 100%;
+    }
+}
+
+/* Get Involved Section */
+.get-involved {
+    padding: 60px 20px;
+    background: #0044cc;
+    color: white;
+    text-align: center;
+}
+
+.get-involved h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.get-involved p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.get-involved .cta-btn {
+    background-color: #ffcc00;
+}
+.cta-btn {
+    background-color: #ffcc00;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    border: none;
+    color: #0044cc;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.cta-btn:hover {
+    background-color: #ffd633;
+}
+
+/* How We Help Section */
+.how-we-help {
+    padding: 60px 20px;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+.help-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.help-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+
