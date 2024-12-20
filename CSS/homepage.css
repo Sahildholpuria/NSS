@@ -80,7 +80,8 @@ header {
     width: 200px;
     border-radius: 5px;
     padding: 10px;
-    z-index: 99; /* Ensure menu items are clickable */
+    z-index: 99;
+    /* Ensure menu items are clickable */
 }
 
 .nav-menu.active ul {
@@ -160,7 +161,8 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    background: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent overlay */
     z-index: -1;
 }
 
@@ -231,9 +233,11 @@ header {
 /* Key Features Section */
 .key-features {
     padding: 50px 20px;
-    background-color: #f9f9f9; /* Light gray */
+    background-color: #f9f9f9;
+    /* Light gray */
     text-align: center;
-    margin-top: 20px; /* Ensure some spacing below the hero section */
+    margin-top: 20px;
+    /* Ensure some spacing below the hero section */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -246,8 +250,10 @@ header {
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     max-width: 1200px;
-    width: 100%; /* Ensures grid doesn't exceed the container width */
-    margin: 0 auto; /* Center the grid within the section */
+    width: 100%;
+    /* Ensures grid doesn't exceed the container width */
+    margin: 0 auto;
+    /* Center the grid within the section */
 }
 
 /* Individual Feature Item */
@@ -263,8 +269,10 @@ header {
 /* Responsive Design */
 @media screen and (max-width: 768px) {
     .features-grid {
-        grid-template-columns: 1fr; /* Switch to single-column layout */
-        gap: 20px; /* Ensure consistent spacing */
+        grid-template-columns: 1fr;
+        /* Switch to single-column layout */
+        gap: 20px;
+        /* Ensure consistent spacing */
     }
 
     .key-features h2 {
@@ -556,6 +564,7 @@ body {
 .get-involved .cta-btn {
     background-color: #ffcc00;
 }
+
 .cta-btn {
     background-color: #ffcc00;
     padding: 10px 20px;
@@ -592,5 +601,3 @@ body {
     padding: 20px;
     text-align: center;
 }
-
-

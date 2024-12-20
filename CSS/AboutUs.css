@@ -10,7 +10,8 @@ body {
 }
 
 header {
-    background-color: #0044cc; /* Deep Blue */
+    background-color: #0044cc;
+    /* Deep Blue */
     color: #fff;
     padding: 10px 20px;
 }
@@ -41,11 +42,13 @@ header {
 }
 
 .nav-menu ul li a:hover {
-    color: #ffd700; /* Gold */
+    color: #ffd700;
+    /* Gold */
 }
 
 .cta-button .btn {
-    background-color: #ffd700; /* Gold */
+    background-color: #ffd700;
+    /* Gold */
     color: #0044cc;
     padding: 10px 15px;
     text-decoration: none;
@@ -55,7 +58,8 @@ header {
 }
 
 .cta-button .btn:hover {
-    background-color: #ffa500; /* Orange */
+    background-color: #ffa500;
+    /* Orange */
     color: #fff;
 }
 
@@ -99,7 +103,7 @@ header {
         display: flex;
     }
 
-    .menu-toggle.active + .nav-menu {
+    .menu-toggle.active+.nav-menu {
         display: flex;
     }
 }
