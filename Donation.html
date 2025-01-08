@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donate Now</title>
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    /* Container */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Header */
+    header {
+      background-color: #005a87;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2em;
+    }
+
+    /* Main Section */
+    .main {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+
+    .info, .form {
+      flex: 1 1 45%;
+      margin: 20px;
+      padding: 20px;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Form Styling */
+    .form h2 {
+      margin-bottom: 20px;
+      font-size: 1.8em;
+      color: #005a87;
+    }
+
+    .form input[type="text"],
+    .form input[type="email"],
+    .form input[type="number"],
+    .form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 1em;
+    }
+
+    .form button {
+      width: 100%;
+      padding: 15px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      font-size: 1.2em;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .form button:hover {
+      background-color: #218838;
+    }
+
+    /* Donation Info */
+    .info h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+      color: #005a87;
+    }
+
+    .info p {
+      font-size: 1.1em;
+      margin-bottom: 20px;
+    }
+
+    .info ul {
+      list-style-type: none;
+    }
+
+    .info ul li {
+      margin: 10px 0;
+    }
+
+    /* Responsive Design */
+    @media screen and (max-width: 768px) {
+      .main {
+        flex-direction: column;
+      }
+
+      .info, .form {
+        flex: 1 1 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Support Our Cause</h1>
+    <p>Your contribution can make a difference.</p>
+  </header>
+
+  <div class="container">
+    <div class="main">
+      <!-- Donation Information Section -->
+      <div class="info">
+        <h2>Why Donate?</h2>
+        <p>We are a non-profit organization focused on making a real impact in communities in need. Your donations help provide food, education, healthcare, and other vital services to those who need it most.</p>
+        <ul>
+          <li><strong>100% of donations</strong> go directly to the cause.</li>
+          <li>Your donation <strong>helps build a better future</strong> for those in need.</li>
+          <li><strong>Every amount counts!</strong> No donation is too small.</li>
+        </ul>
+      </div>
+
+      <!-- Donation Form Section -->
+      <div class="form">
+        <h2>Make a Donation</h2>
+        <form action="/submit-donation" method="POST">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <input type="number" name="amount" placeholder="Donation Amount" required>
+          <textarea name="message" rows="4" placeholder="Leave a message (optional)"></textarea>
+          <button type="submit">Donate Now</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <footer style="background-color: #333; color: white; padding: 20px 0; text-align: center;">
+    <p>&copy; National Student Scholarship. All rights reserved.</p>
+    <p>For more information, please contact us at <a href="mailto:support@nationalstudentscholarships.org" style="color: #fff;">support@nationalstudentscholarships.org</a></p>
+  </footer>
+</body>
+</html>
